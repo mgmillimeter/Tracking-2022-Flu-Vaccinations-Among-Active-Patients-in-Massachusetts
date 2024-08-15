@@ -62,7 +62,7 @@ The dashboard provides in-depth tracking and analysis of flu immunizations among
   - **SQL Query Sample**
     - **Query:** Patients with Flu Shots in 2022
 
-      This SQL [query](https://github.com/mgmillimeter/Tracking-2022-Flu-Vaccinations-Among-Active-Patients-in-Massachusetts/blob/main/PostgreSQL-Flu%20Shots%20immunizations%202022.sql) identifies patients with encounters between 2020 and 2022 who have not recorded a death date. It also finds the earliest flu shot date in 2022 for each patient and combines patient details with their flu shot data.
+      This SQL [query](https://github.com/mgmillimeter/Tracking-2022-Flu-Vaccinations-Among-Active-Patients-in-Massachusetts/blob/main/PostgreSQL-Flu%20Shots%20immunizations%202022.sql) identifies patients with encounters between 2020 and 2022 who have not recorded a death date (Active Patients). It also finds the earliest flu shot date in 2022 for each patient and combines patient details with their flu shot data.
 
       ```sql
       -- CTE to identify patients with encounters between 2020 and 2022 and no recorded death date
