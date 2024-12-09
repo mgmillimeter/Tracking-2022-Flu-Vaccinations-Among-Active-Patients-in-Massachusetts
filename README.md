@@ -1,10 +1,31 @@
 # Tracking 2022 Flu Vaccinations Among Active Patients in Massachusetts
 
-This project analyzes a synthetic dataset that replicates the structure and format of a real flu vaccination dataset from a hospital, providing a realistic simulation for data analysis. The interactive Tableau Dashboard can be found _[here](https://public.tableau.com/app/profile/martin.guiller.iii/viz/TrackingFluVaccinationsforActivePatientsin2022/Dashboard1?publish=yes)_.
+---
 
-The dashboard provides in-depth tracking and analysis of flu immunizations among synthetic patients in Massachusetts.
+## Table of Contents
 
-![Screenshot 2024-08-15 144724](https://github.com/user-attachments/assets/4a1c62f1-b07f-4234-9beb-e5d758fe2cab)
+---
+
+## I. Project Background
+Flu Vaccination Insights evaluates compliance trends among Massachusetts patients in 2022, highlighting key metrics such as vaccination rates by age group, racial demographics, and geographic regions. The analysis uncovers disparities across these metrics, providing a foundation for identifying gaps in outreach and effectiveness.
+
+By aligning findings with seasonal trends, the project delivers actionable recommendations to refine public health strategies and enhance vaccination efforts. The ultimate goal is to boost compliance rates, reduce disparities, and improve population health outcomes through targeted and optimized flu vaccination campaigns.
+
+Insights and recommendations are provided on the following key areas:
+- **_Overall Vaccination Compliance_**:Evaluates the percentage of patients who received the flu vaccine, helping to measure the effectiveness of vaccination efforts across the population.
+- **_Vaccination Rates by Age Group_**: Analyzes flu vaccination rates by different age groups to identify which demographics may need targeted interventions to improve coverage.
+- **_Vaccination Rates by Race_**: Examines flu vaccination rates across different racial and ethnic groups to uncover disparities and ensure equal access to vaccination services.
+- **_Geographic Distribution_**: Assesses vaccination rates across various counties to identify regions with lower compliance and prioritize public health outreach.
+- **_Vaccination Trends Over Time_**: Tracks vaccination trends throughout the year to understand seasonal patterns and develop a plan for future vaccination campaigns.
+
+## II. Data Structure Overview
+
+Flu Vaccinations dataset as seen below consists of 3 tables: patient, encounters, and immunizations, with a total row count of 9,950 records.
+![ERD_immunizations](https://github.com/user-attachments/assets/8e81d6ee-9c6b-479c-aa0c-41674b010d86)
+
+Before analysis, datasets check were conducted to ensure the data quality and understand the structure of the data. These checks helped identify issues, validate key fields, and prepare the for analysis.
+
+The SQL Queries can be found here
 
 ### Synthetic Patients Immunizations Dataset Metrics & Dimensions
 
