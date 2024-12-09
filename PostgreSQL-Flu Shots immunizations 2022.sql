@@ -21,38 +21,48 @@ REQUIREMENT(S): Patients must have been "Active at the hospital".
 
 -- EDA Query Script: 
 
--- CTE to identify patients with encounters between 2020 and 2022 and no recorded deathdate
+-- Step 1: Identify active patients
+-- Create a temporary dataset of patients who had medical encounters between 2020 and 2022
+-- and are still alive (no recorded death date).
 WITH active_patients AS (
-    SELECT DISTINCT e.patient
+    SELECT DISTINCT e.patient  -- Get unique patient IDs from the encounters table
     FROM encounters AS e
-    JOIN patients AS pat ON e.patient = pat.id
-    WHERE e.start BETWEEN '2020-01-01 00:00' AND '2022-12-31 23:59'
-      AND pat.deathdate IS NULL
+    JOIN patients AS pat ON e.patient = pat.id  -- Link encounters to the patients table
+    WHERE e.start BETWEEN '2020-01-01 00:00' AND '2022-12-31 23:59'  -- Check if the encounter happened in 2020-2022
+      AND pat.deathdate IS NULL  -- Include only patients who do not have a death date
 ),
 
--- CTE to find the earliest flu shot date in 2022 for each patient
+-- Step 2: Find the earliest flu shot in 2022 for each patient
+-- Create another temporary dataset to identify the earliest flu shot date in 2022
+-- for patients who received the flu vaccine.
 flu_shot_2022 AS (
-    SELECT patient, MIN(date) AS earliest_flu_shot_2022 
+    SELECT 
+        patient,  -- Patient ID
+        MIN(date) AS earliest_flu_shot_2022  -- Find the earliest flu shot date
     FROM immunizations
-    WHERE code = '5302'
-      AND date BETWEEN '2022-01-01 00:00' AND '2022-12-31 23:59'
-    GROUP BY patient
+    WHERE code = '5302'  -- Only consider records where the vaccine code represents a flu shot
+      AND date BETWEEN '2022-01-01 00:00' AND '2022-12-31 23:59'  -- Check for flu shots given in 2022
+    GROUP BY patient  -- Group the data by patient ID
 )
--- Final query to combine patient details with their earliest flu shot data
+
+-- Step 3: Combine patient details with flu shot data
+-- Retrieve the details of all patients, add information about their flu shot in 2022,
+-- and include only those identified as active patients.
 SELECT 
-    pat.id,
-    pat.first,
-    pat.last,
-    pat.birthdate,
-    EXTRACT(YEAR FROM age('2022-12-31'::date, pat.birthdate)) AS age,
-    pat.race,
-    pat.county,
-    pat.gender,
-    flu.earliest_flu_shot_2022,
-    CASE WHEN flu.patient IS NOT NULL THEN 1 ELSE 0 END AS flu_shot_2022
+    pat.id,  -- Patient ID
+    pat.first,  -- Patient's first name
+    pat.last,  -- Patient's last name
+    pat.birthdate,  -- Patient's date of birth
+    EXTRACT(YEAR FROM age('2022-12-31'::date, pat.birthdate)) AS age,  -- Calculate the patient's age at the end of 2022
+    pat.race,  -- Patient's race
+    pat.county,  -- Patient's county of residence
+    pat.gender,  -- Patient's gender
+    flu.earliest_flu_shot_2022,  -- Earliest flu shot date in 2022 (if available)
+    CASE WHEN flu.patient IS NOT NULL THEN 1 ELSE 0 END AS flu_shot_2022  -- Mark if the patient received a flu shot in 2022
 FROM patients AS pat
-LEFT JOIN flu_shot_2022 AS flu ON pat.id = flu.patient
-WHERE pat.id IN (SELECT patient FROM active_patients);
+LEFT JOIN flu_shot_2022 AS flu ON pat.id = flu.patient  -- Include flu shot data if available
+WHERE pat.id IN (SELECT patient FROM active_patients);  -- Only include active patients
+
 
 -- Query Script Explanations below
 
