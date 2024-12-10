@@ -50,38 +50,53 @@ Below is the overview page from the Tableau Dashboard. The entire interactive da
 
 
 
-#### 1. Overall Vaccination Compliance:
-  - **Total Compliance:** The overall flu vaccination compliance among active patients in Massachusetts for 2022 is 81.4%.
-  - **Total Flu Shots Administered:** 8,101 flu shots were given in 2022.
+### 1. **Overall Vaccination Compliance**  
+- **Total Compliance:** 81.4% of active patients received a flu shot in 2022.  
+- **Total Flu Shots Administered:** 8,101 flu shots were given during the year.  
 
-#### 2. Vaccination Rates by Age Group:
-  - **High Compliance Age Groups:**
-    - **50-64 years:** 96.3% compliance, indicating high vaccination rates among this age group.
-    - **65+ years:** 91.2% compliance, showing a strong uptake among the elderly.
-  - **Low Compliance Age Group:**
-    - **18-34 years:** Only 62.2% compliance, indicating a need for targeted interventions to increase flu vaccinations among younger adults.
+### 2. **Vaccination Rates by Age Group**  
+- **High Compliance Age Groups:**  
+  - **50-64 years:** 96.3% compliance.  
+  - **65+ years:** 91.2% compliance.  
+  - These groups demonstrated the highest vaccination rates, indicating effective outreach.  
 
-#### 3. Vaccination Rates by Race:
-  - **High Compliance Racial Groups:**
-    - **Black:** 84.9%
-    - **Native:** 85.7%
-    - **Asian:** 81.8%
-  - **Low Compliance Racial Group:**
-    - **Other:** 80.0% compliance, suggesting an area for improvement.
+- **Low Compliance Age Group:**  
+  - **18-34 years:** Only 62.2% compliance.  
+  - Highlights the need for tailored strategies to engage younger adults.  
 
-#### 4. Geographic Distribution (By County):
-  - **Flu Shot % by County:** All counties in Massachusetts have an average flu vaccination compliance ranging from 79% to 82%, indicating consistent but slightly varied uptake across the state.
+### 3. **Vaccination Rates by Race**  
+- **High Compliance Racial Groups:**  
+  - **Black:** 84.9% compliance.  
+  - **Native:** 85.7% compliance.  
+  - **Asian:** 81.8% compliance.  
+  - Reflects successful vaccination campaigns in these communities.  
 
-#### 5. Vaccination Trends Over Time:
-  - **Running Sum of Flu Shots:** There was a steady increase in flu vaccinations throughout 2022, with significant increases in August and September, aligning with the start of the flu season.
+- **Low Compliance Racial Group:**  
+  - **Other:** 80.0% compliance.  
+  - Suggests an area for improvement with targeted outreach.  
+
+### 4. **Geographic Distribution (By County)**  
+- **Vaccination Compliance by County:**  
+  - Compliance ranged between **79%** and **82%** across counties, showing consistent uptake statewide.  
+
+### 5. **Vaccination Trends Over Time**  
+- Flu vaccinations steadily increased throughout 2022, with sharp upticks in **August** and **September**, aligning with the start of flu season.  
+
 
 ---
 
 ## IV. Recommendations:
-  - **Target Younger Adults:** Increase efforts to boost vaccination rates in the 18-34 age group.
-  - **Focus on "Other" Racial Category:** Address barriers to vaccination in the "Other" racial category to improve overall compliance.
-  - **Address Geographic Disparities:** Target counties with lower vaccination rates for increased public health outreach and resources.
+ 1. **Targeting Younger Adults:**  
+   - Develop campaigns tailored to the 18-34 age group, such as social media outreach, workplace vaccination drives, or convenient vaccination points.  
 
+2. **Addressing Racial Disparities:**  
+   - Work with community leaders to understand and address barriers for groups with lower compliance, particularly the "Other" category.  
+
+3. **Localizing Strategies:**  
+   - Identify counties with slightly lower compliance and customize approaches to address local challenges.  
+
+4. **Leveraging Seasonal Trends:**  
+   - Continue aligning vaccination efforts with seasonal patterns to maximize uptake during high-demand periods like August and September.  
 ##  Dataset Limitation:
   - **Synthetic Dataset & Gender Representation:** The dataset is synthetic and exclusively includes patients of the female gender. This limitation means that the analysis does not account for differences in flu vaccination rates by gender, which could lead to biased insights and limit the applicability of findings to a broader, more diverse population.
 
