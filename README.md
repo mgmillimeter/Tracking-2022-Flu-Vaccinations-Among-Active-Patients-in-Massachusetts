@@ -85,18 +85,22 @@ Below is the overview page from the Tableau Dashboard. The entire interactive da
 
 ---
 
-## IV. Recommendations:
- 1. **Targeting Younger Adults:**  
-   - Develop campaigns tailored to the 18-34 age group, such as social media outreach, workplace vaccination drives, or convenient vaccination points.  
+## Recommendations
 
-2. **Addressing Racial Disparities:**  
-   - Work with community leaders to understand and address barriers for groups with lower compliance, particularly the "Other" category.  
+### 1. **Focus on Younger Adults**  
+   - Create campaigns targeted at individuals aged 18-34, such as social media promotions, workplace vaccination events, and improving access to flu shots.  
 
-3. **Localizing Strategies:**  
-   - Identify counties with slightly lower compliance and customize approaches to address local challenges.  
+### 2. **Sustain High Compliance Across Groups**  
+   - Although compliance among racial groups is above 80%, consistent efforts should continue to ensure equitable access through community partnerships and outreach initiatives.  
 
-4. **Leveraging Seasonal Trends:**  
-   - Continue aligning vaccination efforts with seasonal patterns to maximize uptake during high-demand periods like August and September.  
+### 3. **Help Counties with Slightly Lower Rates**  
+   - Identify counties with slightly lower vaccination rates and develop tailored strategies to enhance compliance in those areas.  
+
+### 4. **Leverage Seasonal Trends**  
+   - Concentrate vaccination efforts during peak periods like August and September to maximize uptake when people are more likely to get vaccinated.  
+
+---
+     
 ##  Dataset Limitation:
   - **Synthetic Dataset & Gender Representation:** The dataset is synthetic and exclusively includes patients of the female gender. This limitation means that the analysis does not account for differences in flu vaccination rates by gender, which could lead to biased insights and limit the applicability of findings to a broader, more diverse population.
 
