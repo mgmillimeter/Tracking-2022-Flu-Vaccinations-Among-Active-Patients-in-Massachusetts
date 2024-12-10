@@ -30,6 +30,7 @@ Insights and recommendations are provided on the following key areas:
 ## II. Data Structure Overview
 
 Flu Vaccinations dataset as seen below consists of 3 tables: patient, encounters, and immunizations, with a total row count of 9,950 records.
+
 ![ERD_immunizations](https://github.com/user-attachments/assets/8e81d6ee-9c6b-479c-aa0c-41674b010d86)
 
 Before analysis, datasets check were conducted to ensure the data quality and understand the structure of the data. These checks helped identify issues, validate key fields, and prepare the for analysis.
